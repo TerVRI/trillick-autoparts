@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Camping",
+    "slug": "camping",
+    "count": 45
+  },
+  {
+    "name": "Chassis & Body",
+    "slug": "chassis-and-body-components",
+    "count": 555
+  },
+  {
+    "name": "Consumables",
+    "slug": "consumables",
+    "count": 417
+  },
+  {
+    "name": "Enhancements",
+    "slug": "enhancements",
+    "count": 331
+  },
+  {
+    "name": "Exterior Protection",
+    "slug": "exterior-protection",
+    "count": 268
+  },
+  {
+    "name": "Interior Protection",
+    "slug": "interior-protection",
+    "count": 174
+  },
+  {
+    "name": "Lighting",
+    "slug": "lighting",
+    "count": 181
+  },
+  {
+    "name": "Lucas Classic",
+    "slug": "lucas-and-girling-classic",
+    "count": 61
+  },
+  {
+    "name": "Miscellaneous",
+    "slug": "miscellaneous",
+    "count": 720
+  },
+  {
+    "name": "Off-Road",
+    "slug": "off-road",
+    "count": 106
+  },
+  {
+    "name": "Performance",
+    "slug": "performance",
+    "count": 612
+  },
+  {
+    "name": "Racks & Roll Cages",
+    "slug": "racks-and-roll-cages",
+    "count": 140
+  },
+  {
+    "name": "Repair & Service",
+    "slug": "repair-and-service-parts",
+    "count": 944
+  },
+  {
+    "name": "Seats & Trim",
+    "slug": "seats-and-trim",
+    "count": 343
+  },
+  {
+    "name": "Service Kits",
+    "slug": "service-kits",
+    "count": 276
+  },
+  {
+    "name": "Side & Rear Steps",
+    "slug": "side-and-rear-steps",
+    "count": 41
+  },
+  {
+    "name": "Suspension & Axle",
+    "slug": "suspension-and-axle",
+    "count": 549
+  },
+  {
+    "name": "Tools",
+    "slug": "tools",
+    "count": 143
+  },
+  {
+    "name": "Towing",
+    "slug": "towing",
+    "count": 83
+  },
+  {
+    "name": "Wheels",
+    "slug": "wheels",
+    "count": 198
+  },
+  {
+    "name": "Winches & Recovery",
+    "slug": "winching",
+    "count": 105
+  }
+]
