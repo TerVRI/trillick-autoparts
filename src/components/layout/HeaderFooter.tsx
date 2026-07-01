@@ -55,6 +55,11 @@ export function Header() {
                 All Parts
               </Link>
             </li>
+            <li>
+              <Link href="/tools" className="rounded px-3 py-1.5 font-semibold text-amber-800 bg-amber-100 hover:bg-amber-200">
+                Tools
+              </Link>
+            </li>
             {BRITPART_CATEGORIES.map((cat) => (
               <li key={cat.slug}>
                 <Link
@@ -91,6 +96,8 @@ export function Footer() {
           <ul className="space-y-2 text-sm">
             <li><Link href="/about" className="hover:text-amber-400">About Us</Link></li>
             <li><Link href="/catalogue" className="hover:text-amber-400">Britpart Catalogue</Link></li>
+            <li><Link href="/tools" className="hover:text-amber-400">Adventure Tools</Link></li>
+            <li><Link href="/tools/build-configurator" className="hover:text-amber-400">Build Configurator</Link></li>
             <li><Link href="/delivery" className="hover:text-amber-400">Delivery</Link></li>
             <li><Link href="/returns" className="hover:text-amber-400">Returns Policy</Link></li>
             <li><Link href="/faqs" className="hover:text-amber-400">FAQs</Link></li>

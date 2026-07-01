@@ -52,6 +52,7 @@ export function saveQuote(data: {
   customerEmail: string;
   customerPhone?: string;
   message?: string;
+  toolContext?: string;
 }): string {
   const quotes = readJson<QuoteRequest[]>("quotes.json", []);
   const id = randomUUID();
@@ -62,6 +63,7 @@ export function saveQuote(data: {
     customerEmail: data.customerEmail,
     customerPhone: data.customerPhone,
     message: data.message,
+    toolContext: data.toolContext,
     createdAt: new Date().toISOString(),
   });
   writeJson("quotes.json", quotes);

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getCatalogStats, getCategories } from "@/lib/catalog";
 import { BRITPART_CATEGORIES } from "@/lib/types";
 import { Truck, Package, Globe, Shield } from "lucide-react";
+import { HomeToolsSection } from "@/components/tools/HomeToolsSection";
 
 export default function HomePage() {
   const stats = getCatalogStats();
@@ -35,9 +36,17 @@ export default function HomePage() {
             >
               Interactive Catalogue
             </Link>
+            <Link
+              href="/tools"
+              className="rounded-lg border border-amber-500 bg-amber-600/20 px-6 py-3 font-semibold hover:bg-amber-600/30"
+            >
+              Adventure Tools
+            </Link>
           </div>
         </div>
       </section>
+
+      <HomeToolsSection />
 
       <section className="border-b border-stone-200 bg-amber-50">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-6 md:grid-cols-4">

@@ -75,6 +75,7 @@ export interface QuoteRequest {
   customerEmail: string;
   customerPhone?: string;
   message?: string;
+  toolContext?: string;
   createdAt: string;
 }
 
