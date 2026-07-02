@@ -22,3 +22,47 @@ body {
 .font-display {
   font-family: var(--font-fjalla), system-ui, sans-serif;
 }
+
+.site-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.site-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+}
+
+.site-content table th,
+.site-content table td {
+  border: 1px solid #d6d3d1;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.site-content table th {
+  background: #f5f5f4;
+  font-weight: 600;
+}
+
+.site-content aside img {
+  float: right;
+  max-width: 200px;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.site-content section,
+.site-content aside {
+  margin-bottom: 1.5rem;
+}
+
+.site-content a {
+  color: #b45309;
+}
+
+.site-content a:hover {
+  text-decoration: underline;
+}

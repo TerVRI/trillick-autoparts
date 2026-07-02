@@ -5,6 +5,14 @@ import { SearchBar } from "@/components/SearchBar";
 import { CartButton } from "@/components/CartButton";
 import { VehicleSelector } from "@/components/VehicleSelector";
 
+const primaryNav = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/blog", label: "Blog" },
+  { href: "/location", label: "Location" },
+  { href: "/contact", label: "Contact Us" },
+];
+
 export function Header() {
   return (
     <header className="border-b border-stone-200 bg-white">
@@ -26,6 +34,23 @@ export function Header() {
           </div>
         </div>
       </div>
+
+      <nav className="border-b border-stone-200 bg-white" aria-label="Primary">
+        <div className="mx-auto max-w-7xl overflow-x-auto px-4">
+          <ul className="flex gap-1 py-2 text-sm whitespace-nowrap">
+            {primaryNav.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className="rounded px-3 py-1.5 font-medium text-stone-700 hover:bg-amber-100 hover:text-amber-900"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
 
       <div className="mx-auto max-w-7xl px-4 py-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
@@ -95,6 +120,8 @@ export function Footer() {
           <h4 className="font-semibold text-white mb-3">Quick Links</h4>
           <ul className="space-y-2 text-sm">
             <li><Link href="/about" className="hover:text-amber-400">About Us</Link></li>
+            <li><Link href="/blog" className="hover:text-amber-400">Blog</Link></li>
+            <li><Link href="/location" className="hover:text-amber-400">Location</Link></li>
             <li><Link href="/catalogue" className="hover:text-amber-400">Britpart Catalogue</Link></li>
             <li><Link href="/tools" className="hover:text-amber-400">Adventure Tools</Link></li>
             <li><Link href="/tools/build-configurator" className="hover:text-amber-400">Build Configurator</Link></li>

@@ -1,4 +1,5 @@
 import { getAllProducts, getCategories } from "@/lib/catalog";
+import { getBlogPosts } from "@/lib/site-content";
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -6,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const products = getAllProducts();
   const categories = getCategories();
 
-  const staticPages = ["", "/britpart", "/catalogue", "/about", "/contact", "/location", "/faqs", "/delivery", "/returns", "/terms"].map(
+  const staticPages = ["", "/britpart", "/catalogue", "/about", "/blog", "/contact", "/location", "/faqs", "/delivery", "/returns", "/terms"].map(
     (path) => ({
       url: `${base}${path}`,
       lastModified: new Date(),
@@ -14,6 +15,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: path === "" ? 1 : 0.8,
     })
   );
+
+  const blogPages = getBlogPosts().map((p) => ({
+    url: `${base}/blog/${p.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
 
   const categoryPages = categories.map((c) => ({
     url: `${base}/britpart/${c.slug}`,
@@ -29,5 +37,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...categoryPages, ...productPages];
+  return [...staticPages, ...blogPages, ...categoryPages, ...productPages];
 }

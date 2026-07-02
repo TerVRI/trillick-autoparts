@@ -16,6 +16,7 @@
     "audit:security": "npm audit --audit-level=moderate",
     "extract": "python3 scripts/extract-catalogue.py",
     "scrape": "tsx scripts/scrape-site.ts",
+    "scrape-content": "tsx scripts/scrape-content.ts",
     "merge": "tsx scripts/merge-products.ts",
     "seed": "tsx scripts/seed-db.ts",
     "assign-prices": "tsx scripts/assign-prices.ts",
