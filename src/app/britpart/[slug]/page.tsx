@@ -4,6 +4,7 @@ import { getProductsByCategory, filterByVehicle } from "@/lib/catalog";
 import { BRITPART_CATEGORIES } from "@/lib/types";
 import { ProductCard } from "@/components/ProductCard";
 import { VehicleSelector } from "@/components/VehicleSelector";
+import { PageBanner } from "@/components/PageBanner";
 
 export async function generateStaticParams() {
   return BRITPART_CATEGORIES.map((c) => ({ slug: c.slug }));
@@ -35,7 +36,14 @@ export default async function CategoryPage({
   if (vehicle) products = filterByVehicle(products, vehicle);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8">
+    <div>
+      <PageBanner
+        title={cat.name}
+        subtitle={`${products.length} parts`}
+        imageKey="shopBanner"
+        compact
+      />
+      <div className="mx-auto max-w-7xl px-4 py-8">
       <nav className="text-sm text-stone-500 mb-4">
         <Link href="/" className="hover:text-amber-700">Home</Link>
         <span className="mx-2">›</span>
@@ -63,8 +71,6 @@ export default async function CategoryPage({
           </div>
         </aside>
         <div className="lg:col-span-3">
-          <h1 className="font-display text-2xl font-bold uppercase capitalize mb-1">{cat.name}</h1>
-          <p className="text-stone-500 text-sm mb-6">{products.length} parts</p>
           <div className="grid gap-4 grid-cols-2 md:grid-cols-3">
             {products.map((p) => (
               <ProductCard key={p.partNumber} product={p} />
@@ -74,6 +80,7 @@ export default async function CategoryPage({
             <p className="text-stone-500 py-12 text-center">No parts found for this filter.</p>
           )}
         </div>
+      </div>
       </div>
     </div>
   );

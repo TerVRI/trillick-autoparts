@@ -4,6 +4,7 @@ import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { BRITPART_CATEGORIES } from "@/lib/types";
 import { StockBadge } from "@/components/StockBadge";
+import { PageBanner } from "@/components/PageBanner";
 import type { Product, StockStatus } from "@/lib/types";
 
 export default function CataloguePage() {
@@ -38,8 +39,13 @@ export default function CataloguePage() {
   }, [products, query, category]);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8">
-      <h1 className="font-display text-3xl font-bold uppercase mb-2">Interactive Catalogue</h1>
+    <div>
+      <PageBanner
+        title="Interactive Catalogue"
+        subtitle="Search the full Britpart 2025/26 accessory catalogue."
+        imageKey="catalogueBanner"
+      />
+      <div className="mx-auto max-w-7xl px-4 py-8">
       <p className="text-stone-600 mb-6 max-w-2xl">
         Search the full Britpart 2025/26 accessory catalogue. You can also{" "}
         <a
@@ -114,6 +120,7 @@ export default function CataloguePage() {
           </div>
         </>
       )}
+      </div>
     </div>
   );
 }
