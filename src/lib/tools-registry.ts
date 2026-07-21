@@ -36,6 +36,7 @@ export const TOOLS: ToolDef[] = [
   { slug: "catalogue", href: "/catalogue", title: "Interactive Catalogue", description: "Browse the full Britpart catalogue online", category: "find-diagnose", icon: BookOpen, featured: true },
   { slug: "obd", href: "/tools/diagnostics/obd-code-lookup", title: "OBD Code Lookup", description: "Look up fault codes in plain English", category: "find-diagnose", icon: AlertTriangle, featured: true },
   { slug: "obd-dashboard", href: "/tools/diagnostics/obd-dashboard", title: "OBD Dashboard", description: "Live gauges, diagnostics & car profile via USB ELM327", category: "find-diagnose", icon: Activity, featured: true },
+  { slug: "bmw-inpa", href: "/tools/diagnostics/bmw-inpa", title: "BMW Diagnostics (INPA-style)", description: "Read BMW E-series modules & fault codes via K+DCAN cable", category: "find-diagnose", icon: Car },
   { slug: "symptoms", href: "/tools/diagnostics/symptom-helper", title: "Symptom Helper", description: "Match symptoms to likely causes and parts", category: "find-diagnose", icon: Stethoscope },
   { slug: "maintenance", href: "/tools/diagnostics/maintenance-planner", title: "Maintenance Planner", description: "Service reminders by mileage and model", category: "find-diagnose", icon: Calendar },
   { slug: "service-kits", href: "/tools/diagnostics/service-kit-finder", title: "Service Kit Finder", description: "Find service kits for your Land Rover", category: "find-diagnose", icon: ClipboardList },
